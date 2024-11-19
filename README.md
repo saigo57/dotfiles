@@ -1,4 +1,8 @@
 # install chezmoi
 ```
-sh -c "$(curl -fsLS get.chezmoi.io)"
+# mac
+$ sh -c "$(curl -fsLS get.chezmoi.io)"
+
+# windows
+$ winget install twpayne.chezmoi
 ```

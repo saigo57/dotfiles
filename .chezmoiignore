@@ -1,0 +1,8 @@
+README.md
+
+{{- if (eq .chezmoi.os "windows") }}
+.bash_profile
+.bashrc
+.config/nvim/init.vim
+{{- else }}
+{{- end }}
