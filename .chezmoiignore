@@ -5,6 +5,5 @@ README.md
 .bashrc
 .config/nvim/init.vim
 {{- else }}
-AppData/Roaming/Code/User/settings.json
-AppData/Roaming/Code/User/keybindings.json
+AppData
 {{- end }}
