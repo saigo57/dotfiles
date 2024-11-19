@@ -1,0 +1,39 @@
+{
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "github.copilot.editor.enableAutoCompletions": true,
+    // vim
+    "vscode-neovim.useWSL": true,
+    "vscode-neovim.neovimExecutablePaths.linux": "/snap/bin/nvim",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    // editor
+    "editor.fontFamily": "'Monaspace Neon Var', Consolas, 'Courier New', monospace",
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "on",
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "workbench.colorTheme": "Tokyo Night",
+    "workbench.colorCustomizations": {
+        // アクティブなタブを見やすく
+        "tab.activeBackground": "#2a2e3d",
+        "tab.unfocusedActiveBackground": "#2a2e3d",
+        // エディタの境界線を見やすく
+        "editorGroup.border": "#1d4971",
+    },
+
+    "[rust]": {
+        "editor.formatOnSave": false
+    },
+    "rust-analyzer.checkOnSave": true,
+    "rust-analyzer.check.command": "clippy",
+    "rust-analyzer.check.extraArgs": [
+        "--",
+        "-A",
+        "clippy::needless_return"
+    ],
+}

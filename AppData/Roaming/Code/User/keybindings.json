@@ -1,0 +1,13 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "space d",
+        "command": "editor.action.goToDeclaration",
+        "when": "neovim.mode == normal && editorTextFocus",
+    },
+    {
+        "key": "space b",
+        "command": "workbench.action.navigateBack",
+        "when": "neovim.mode == normal && editorTextFocus",
+    },
+]
