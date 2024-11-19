@@ -1,0 +1,10 @@
+[alias]
+        tree = log --oneline --decorate --graph --branches --tags --remotes
+        st = status
+        co = checkout
+        sw = switch
+	swc = switch -c
+
+[user]
+	email = a.saigo1997@gmail.com
+	name = saigo57
