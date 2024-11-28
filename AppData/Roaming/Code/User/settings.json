@@ -17,6 +17,8 @@
     "editor.minimap.enabled": false,
     "editor.wordWrap": "on",
     "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.mouseWheelZoom": true,
+    "editor.stickyScroll.enabled": true,
     "workbench.colorTheme": "Tokyo Night",
     "workbench.colorCustomizations": {
         // アクティブなタブを見やすく
@@ -24,6 +26,13 @@
         "tab.unfocusedActiveBackground": "#2a2e3d",
         // エディタの境界線を見やすく
         "editorGroup.border": "#1d4971",
+        // StickyScrollの境界を見やすく
+        "editorStickyScroll.background": "#22232c",
+        "editorStickyScroll.border": "#1d4971",
+        "sideBarStickyScroll.background": "#22232c",
+        "sideBarStickyScroll.border": "#1d4971",
+        "terminalStickyScroll.background": "#22232c",
+        "terminalStickyScroll.border": "#1d4971",
     },
 
     "[rust]": {
