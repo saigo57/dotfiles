@@ -25,9 +25,15 @@ nnoremap X D
 xnoremap x d
 
 " IME OFF設定
+{{ if eq .chezmoi.os "linux" }}
 " /usr/local/bin/zenhanにzenhan.exeをコピーしておく
 if executable('zenhan')
   autocmd InsertLeave * :call system('zenhan 0')
   autocmd CmdlineLeave * :call system('zenhan 0')
 endif
-
+{{ else }}
+if executable('im-select')
+  autocmd InsertLeave * :call system('im-select com.apple.keylayout.ABC')
+  autocmd CmdlineLeave * :call system('im-select com.apple.keylayout.ABC')
+endif
+{{ end }}
