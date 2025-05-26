@@ -4,6 +4,7 @@ README.md
 .bash_profile
 .bashrc
 .config/nvim/init.vim
+.config/nvim/init.lua
 {{- else }}
 AppData
 {{- end }}
