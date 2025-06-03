@@ -13,6 +13,8 @@ $ winget install twpayne.chezmoi
 [data]
 email = ""
 name = ""
+[edit]
+command = "nvim"
 ```
 
 # chezmoiコマンド
