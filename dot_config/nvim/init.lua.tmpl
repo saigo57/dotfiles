@@ -45,6 +45,9 @@ vim.keymap.set('n', 'xx', 'dd')
 vim.keymap.set('n', 'X', 'D')
 vim.keymap.set('x', 'x', 'd')
 
+-- 画面移動をEnterで
+vim.keymap.set('n', '<CR><CR>', '<C-w><C-w>', { noremap = true, silent = true })
+
 -- telescope
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<C-p>', builtin.find_files, { desc = 'Telescope find files' })

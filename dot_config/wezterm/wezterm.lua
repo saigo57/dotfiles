@@ -1,6 +1,7 @@
 local wezterm = require 'wezterm'
 
 local config = {}
+local is_windows = wezterm.target_triple:find("windows")
 
 if wezterm.config_builder then
   config = wezterm.config_builder()
@@ -9,7 +10,11 @@ end
 config.color_scheme = 'AdvenureTime'
 config.font_size = 10
 
-config.default_prog = { 'pwsh.exe', '-NoLogo' }
+if is_windows then
+  config.default_prog = { 'pwsh.exe', '-NoLogo' }
+else
+  config.default_prog = { 'zsh', '-l' }
+end
 
 -- 背景透過
 config.window_background_opacity = 0.85
