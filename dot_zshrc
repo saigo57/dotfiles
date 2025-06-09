@@ -28,6 +28,12 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# z
+. ~/z/z.sh
+
 # rust
 . "$HOME/.cargo/env"
 

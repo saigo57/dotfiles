@@ -7,7 +7,7 @@ $ sh -c "$(curl -fsLS get.chezmoi.io)"
 $ winget install twpayne.chezmoi
 ```
 
-# 設定
+# chezmoiの設定
 ```
 # ~/.config/chezmoi/chezmoi.toml
 [data]
@@ -16,6 +16,13 @@ name = ""
 [edit]
 command = "nvim"
 ```
+
+# その他セットアップ
+## fzf
+fzfのリポジトリを~/.fzfにcloneしてきて、~/.fzf/installを実行
+
+## z
+zのリポジトリは~/zにcloneする(~/.zだと動かない)
 
 # chezmoiコマンド
 ```
