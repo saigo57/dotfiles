@@ -51,4 +51,6 @@ precmd() { vcs_info }
 PROMPT='%n@%m %F{110}%~ %f%# '
 RPROMPT='${vcs_info_msg_0_}%f'
 
+# chezmoi管理しない設定
+source ~/.zshrc.local
 
