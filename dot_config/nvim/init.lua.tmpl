@@ -15,6 +15,9 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'greggh/claude-code.nvim'
 
+-- nerdtree
+Plug 'preservim/nerdtree'
+
 vim.call('plug#end')
 
 
@@ -46,7 +49,7 @@ require("claude-code").setup({
   refresh = {
     enable = true,           -- Enable file change detection
     updatetime = 100,        -- updatetime when Claude Code is active (milliseconds)
-    timer_interval = 1000,   -- How often to check for file changes (milliseconds)
+    timer_interval = 200,    -- How often to check for file changes (milliseconds)
     show_notifications = true, -- Show notification when files are reloaded
   },
   -- Git project settings
@@ -114,6 +117,15 @@ vim.keymap.set('n', '<D-f>', builtin.live_grep, { desc = 'Telescope live grep' }
 vim.keymap.set('n', 'fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', 'fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
+-- claude
+vim.api.nvim_create_user_command('CC', function()
+  vim.cmd('ClaudeCode')
+end, {})
+
+-- nardtree
+vim.api.nvim_create_user_command('NT', function()
+  vim.cmd('NERDTree')
+end, {})
 
 -- IME OFF設定
 {{ if eq .chezmoi.os "linux" }}
@@ -139,4 +151,16 @@ if vim.fn.executable("im-select") == 1 then
     callback = set_zenhan_off,
   })
 end
+
+-- ファイルの外部変更を自動で反映
+vim.opt.autoread = true
+vim.opt.updatetime = 500  -- CursorHoldの間隔を短縮（ミリ秒）
+vim.api.nvim_create_autocmd({ "WinEnter", "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
+  pattern = "*",
+  callback = function()
+    if vim.fn.getcmdwintype() == "" then
+      vim.cmd("checktime")
+    end
+  end,
+})
 
