@@ -16,6 +16,8 @@ else
   config.default_prog = { 'zsh', '-l' }
 end
 
+config.audible_bell = "Disabled"
+
 -- 背景透過
 config.window_background_opacity = 0.85
 
