@@ -17,6 +17,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias tmuxnew='tmux new -s'
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
@@ -50,6 +51,13 @@ zstyle ':vcs_info:git:*' check-for-changes true
 precmd() { vcs_info }
 PROMPT='%n@%m %F{110}%~ %f%# '
 RPROMPT='${vcs_info_msg_0_}%f'
+
+# uv用?
+. "$HOME/.local/bin/env"
+
+# wasm用
+export WASMTIME_HOME="$HOME/.wasmtime"
+export PATH="$WASMTIME_HOME/bin:$PATH"
 
 # chezmoi管理しない設定
 source ~/.zshrc.local
