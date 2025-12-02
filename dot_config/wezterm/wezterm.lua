@@ -10,6 +10,7 @@ config.color_scheme = 'AdvenureTime'
 config.font_size = 10
 
 config.default_prog = { 'pwsh.exe', '-NoLogo' }
+config.audible_bell = "Disabled"
 
 -- 背景透過
 config.window_background_opacity = 0.85
