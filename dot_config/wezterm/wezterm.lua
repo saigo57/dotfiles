@@ -9,6 +9,7 @@ end
 
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
+config.font = wezterm.font('Monaspace Neon Var');
 config.font_size = 10
 config.scrollback_lines = 10000
 config.enable_scroll_bar = true
